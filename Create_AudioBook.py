@@ -3,7 +3,7 @@ import pyttsx3
 
 file = str(input("Enter file name: "))
 
-pdfReader = PyPDF.PdfFileReader(open(file + '.pdf', 'rb'))
+pdfReader = PyPDF3.PdfFileReader(open(file + '.pdf', 'rb'))
 
 speaker = pyttsx3.init()
 
@@ -14,5 +14,5 @@ for page_num in range(pdfReader.numPages):
 
 speaker.stop()
 
-engine.save_to_file(text, 'C:\Users\overl\Downloads\audio.mp3')
+engine.save_to_file(text, 'C:/Users/overl/Downloads/audio.mp3')
 engine.runAndWait()
